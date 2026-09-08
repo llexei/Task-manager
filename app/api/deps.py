@@ -10,7 +10,7 @@ from redis import Redis
 from app.core.redis import get_redis
 from app.core.security import is_revoked
 
-oauth2_scheme=OAuth2PasswordBearer(tokenUrl='/api/v1/auth/login')
+oauth2_scheme=OAuth2PasswordBearer(tokenUrl='/api/auth/login')
 DbSession=Annotated[Session,Depends(get_db)]
 RedisClient=Annotated[Redis,Depends(get_redis)]
 

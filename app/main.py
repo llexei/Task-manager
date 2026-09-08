@@ -21,8 +21,8 @@ app.add_middleware(
     window=10
 )
 
-app.include_router(auth.router,prefix='/api/v1/auth',tags=['auth'])
-app.include_router(task.router,prefix='/api/v1',tags=['tasks'])
+app.include_router(auth.router,prefix='/api/auth',tags=['auth'])
+app.include_router(task.router,prefix='/api',tags=['tasks'])
 
 if __name__ == '__main__':
     import uvicorn
